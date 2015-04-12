@@ -42,7 +42,7 @@ def test():
 
 @task()
 def build():
-    local("pandoc --from=markdown --to=rst README.md -o README.rst")
+    local("pandoc --from=markdown --to=rst README.md -o .tmp/README.rst")
     local("python setup.py sdist")
     local("python setup.py bdist_wheel")
 

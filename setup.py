@@ -18,7 +18,7 @@ setup(
     #
     # $ fab build
     # ########################################################################
-    long_description=(open('README.rst').read()),
+    long_description=(open('.tmp/README.rst').read()),
 
     url='https://github.com/illagrenan/misc-filename-utils',
     license='MIT',
