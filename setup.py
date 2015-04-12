@@ -29,7 +29,7 @@ setup(
     # installed (it’s still part of the source distribution)
     # since that would wreak havoc.
     # find_packages(exclude=['tests*'])
-    packages=['color_printer'],
+    packages=['misc_filename_utils'],
 
 
     install_requires=['awesome-slugify'],

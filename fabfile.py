@@ -24,11 +24,11 @@ from fabric.operations import local
 @task()
 def test_install():
     with settings(warn_only=True):
-        local("pip uninstall color_printer --yes")
+        local("pip uninstall misc-filename-utils --yes")
         print("Uninstall OK.")
 
-    local("pip install --use-wheel --no-index --find-links dist color_printer")
-    local("pip uninstall color_printer --yes")
+    local("pip install --use-wheel --no-index --find-links dist misc-filename-utils")
+    local("pip uninstall misc-filename-utils --yes")
 
     print("Install OK.")
 
