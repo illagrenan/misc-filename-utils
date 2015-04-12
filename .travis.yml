@@ -8,7 +8,7 @@ python:
   - "nightly"
 install:
     - if [[ $TRAVIS_PYTHON_VERSION != 3.3 || $TRAVIS_PYTHON_VERSION != 3.4 ]]; then pip install fabric unittest2; fi
-    - pip install colorama
+    - pip install awesome-slugify
     - pip install coveralls
     - pip install nose
     - pip install future
@@ -16,7 +16,7 @@ install:
 script:
     - python setup.py build
     - python setup.py sdist
-    - nosetests -v --with-coverage --cover-package=color_printer --cover-tests --cover-erase --with-doctest
+    - nosetests -v --with-coverage --cover-package=misc-filename-utils --cover-tests --cover-erase --with-doctest
 after_success:
     - coveralls
 notifications:
