@@ -14,3 +14,11 @@
 ```bash
 pip install --upgrade git+git://github.com/illagrenan/misc-filename-utils.git#egg=misc-filename-utils
 ```
+
+## Usage ##
+
+```python
+from misc_filename_utils.funcs import get_safe_path_name
+from misc_filename_utils.funcs import upload_path
+from misc_filename_utils.funcs import get_filename_from_url
+```
