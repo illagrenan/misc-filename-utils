@@ -15,6 +15,13 @@
 pip install --upgrade git+git://github.com/illagrenan/misc-filename-utils.git#egg=misc-filename-utils
 ```
 
+You can add this package to `requirements.txt`:
+
+```bash
+-e git+git://github.com/illagrenan/misc-filename-utils.git#egg=misc-filename-utils
+```
+
+
 ## Usage ##
 
 **get_safe_path_name**
