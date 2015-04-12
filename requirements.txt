@@ -1,0 +1,8 @@
+Fabric
+coverage
+nose
+future
+six
+wheel
+
+awesome-slugify
