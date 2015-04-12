@@ -12,7 +12,7 @@ setup(
     #
     # README.rst is generated from README.md:
     #
-    # $ pandoc --from=markdown --to=rst README.md -o README.rst
+    # $ pandoc --from=markdown --to=rst README.md -o .tmp/README.rst
     #
     # ~ OR ~
     #
