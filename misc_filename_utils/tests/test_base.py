@@ -20,7 +20,6 @@ class BaseTestCase(TestCase):
             ("čřž", "crz"),
             ("&&", ""),
             ("A-B-C.DOCx", "a-b-c.docx"),
-            ("http://example.com/foo/bar/foo-bar.jpg?h600", "foo-bar.jpg"),
         ]
 
         for unsafe_filename, expected in test_data:
@@ -29,6 +28,7 @@ class BaseTestCase(TestCase):
     def test_filename_from_url(self):
         test_data = [
             ("http://www.example.com/foo.pdf", "foo.pdf"),
+            ("http://example.com/foo/bar/foo-bar.jpg?h600", "foo-bar.jpg")
         ]
 
         for url, expected in test_data:
