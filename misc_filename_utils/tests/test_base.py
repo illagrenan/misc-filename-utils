@@ -20,6 +20,7 @@ class BaseTestCase(TestCase):
             ("čřž", "crz"),
             ("&&", ""),
             ("A-B-C.DOCx", "a-b-c.docx"),
+            ("http://example.com/foo/bar/foo-bar.jpg?h600", "foo-bar.jpg"),
         ]
 
         for unsafe_filename, expected in test_data:
