@@ -7,7 +7,6 @@ import sys
 
 import six
 
-
 if not six.PY2:
     print("Run Fabfile only under Python 2.x")
     sys.exit(0)
@@ -40,7 +39,6 @@ def test():
 
 @task()
 def build():
-    local("pandoc --from=markdown --to=rst README.md -o _generated/README.rst")
     local("python setup.py sdist")
     local("python setup.py bdist_wheel")
 

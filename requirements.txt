@@ -4,5 +4,5 @@ nose
 future
 six
 wheel
-
+pypandoc
 awesome-slugify
