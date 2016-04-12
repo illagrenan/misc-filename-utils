@@ -6,7 +6,13 @@ from __future__ import (absolute_import, division, print_function, unicode_liter
 import inspect
 import os
 import os.path
-import urlparse
+import sys
+
+if sys.version_info >= (3, 0):
+    from urllib.parse import urlparse
+
+if (3, 0) > sys.version_info >= (2, 5):
+    from urlparse import urlparse
 
 from slugify import Slugify
 
