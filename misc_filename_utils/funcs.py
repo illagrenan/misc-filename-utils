@@ -6,13 +6,13 @@ from __future__ import (absolute_import, division, print_function, unicode_liter
 import inspect
 import os
 import os.path
-import sys
 
-if sys.version_info >= (3, 0):
-    from urllib.parse import urlparse
-
-if (3, 0) > sys.version_info >= (2, 5):
-    from urlparse import urlparse
+try:
+    # Python 3.x
+    from urllib.parse import urlsplit
+except ImportError:
+    # Python 2.x
+    from urlparse import urlsplit
 
 from slugify import Slugify
 
@@ -44,7 +44,7 @@ def get_filename_from_url(url):
     :rtype: unicode
     """
 
-    name, extension = os.path.splitext(os.path.basename(urlparse.urlsplit(url).path))
+    name, extension = os.path.splitext(os.path.basename(urlsplit(url).path))
     fin = "{filename}{extension_with_dot}".format(filename=name.strip(), extension_with_dot=extension.strip().lower())
 
     return fin
