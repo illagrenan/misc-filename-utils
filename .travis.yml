@@ -12,6 +12,7 @@ install:
     - pip install future
     - pip install six
 script:
+    - rm -f fabfile.py
     - python setup.py build
     - python setup.py sdist
     - nosetests -v --with-coverage --cover-package=misc_filename_utils --cover-tests --cover-erase --with-doctest
